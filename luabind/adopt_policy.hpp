@@ -33,6 +33,9 @@
 #include <luabind/detail/policy.hpp>
 #include <luabind/back_reference_fwd.hpp>
 
+#include <luabind/detail/conversion_policies/pointer_converter.hpp>
+#include <luabind/detail/typetraits.hpp>
+
 namespace luabind {
 	namespace detail {
 
