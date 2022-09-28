@@ -198,9 +198,9 @@ namespace luabind {
 			T& to_cpp(lua_State*, by_reference<T>, int)
 			{
 #ifdef _MSC_VER
-    				storage_.template construct<T>();
+				storage_.template construct<T>();
 #else
-    				storage_.decltype(storage_)::template construct<T>();
+				storage_.decltype(storage_)::template construct<T>();
 #endif
 				return storage_.template get<T>();
 			}
@@ -223,9 +223,9 @@ namespace luabind {
 			T* to_cpp(lua_State*, by_pointer<T>, int)
 			{
 #ifdef _MSC_VER
-    				storage_.template construct<T>();
+					storage_.template construct<T>();
 #else
-    				storage_.decltype(storage_)::template construct<T>();
+					storage_.decltype(storage_)::template construct<T>();
 #endif
 				return &storage_.template get<T>();
 			}
@@ -277,4 +277,3 @@ namespace luabind
 }
 
 #endif // LUABIND_OUT_VALUE_POLICY_HPP_INCLUDED
-
